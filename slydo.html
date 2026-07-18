@@ -79,6 +79,21 @@
             width: min(100%, (100svh - var(--edge-gap)) * 9 / 16);
             height: auto;
         }
+        #leaderboard-list {
+            max-height: 55vh;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,0.25) transparent;
+        }
+        #leaderboard-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        #leaderboard-list::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.25);
+            border-radius: 3px;
+        }
+        #leaderboard-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-black flex flex-col items-center justify-start font-sans text-white select-none p-4">
@@ -242,7 +257,7 @@
         </div>
 
         <div id="screen-leaderboard" class="absolute inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4 backdrop-blur-md hidden">
-            <div class="bg-neutral-900 border border-white/10 text-white p-6 rounded-3xl w-full shadow-2xl relative flex flex-col max-h-[90vh]">
+            <div class="bg-neutral-900 border border-white/10 text-white p-6 rounded-3xl w-full shadow-2xl relative flex flex-col max-h-full">
                 <button onclick="closeLeaderboard()" class="absolute top-5 right-5 text-white/50 hover:text-white transition-colors active:scale-90">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
