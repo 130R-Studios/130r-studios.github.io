@@ -81,7 +81,11 @@
         @media (max-width: 640px) {
             :root { --edge-gap: 0rem; }
             body { padding: 0 !important; }
-            #game-container { border-radius: 0 !important; }
+            #game-container {
+                border-radius: 0 !important;
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
         }
         #game-container {
             aspect-ratio: 9 / 16;
